@@ -6,9 +6,7 @@ export default function Footer() {
     <footer className="bg-[#0B0C0E] border-t border-white/10 pt-20 pb-8 relative overflow-hidden" data-testid="site-footer">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-4 gap-12">
         <div className="lg:col-span-2">
-          <div className="font-serif text-5xl lg:text-6xl text-[#F8F8F6] leading-[0.95] mb-4">
-            Lalu<br/><span className="text-[#D4AF37]">Clading</span>
-          </div>
+          <img src="/logo-full.png" alt="Lalu Clading — Surfaces for a Better Tomorrow" className="w-64 lg:w-80 h-auto object-contain mb-6 rounded-[2px]" data-testid="footer-logo" />
           <p className="text-[#9E9E98] max-w-md text-sm leading-relaxed">
             Architectural Skins of Distinction. Bespoke facade & interior surface systems for luxury residences,
             corporate envelopes and boutique hospitality across India.

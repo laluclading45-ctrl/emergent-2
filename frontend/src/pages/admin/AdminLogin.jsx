@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-import { Lock } from "lucide-react";
 
 export default function AdminLogin() {
   const { login } = useAuth();
@@ -27,9 +26,7 @@ export default function AdminLogin() {
     <div className="min-h-screen bg-[#0B0C0E] flex items-center justify-center px-6" data-testid="admin-login">
       <div className="w-full max-w-md">
         <div className="text-center mb-10">
-          <div className="w-14 h-14 border border-[#D4AF37] mx-auto mb-6 flex items-center justify-center">
-            <Lock className="text-[#D4AF37]" size={20} />
-          </div>
+          <img src="/logo-full.png" alt="Lalu Clading" className="h-20 w-auto object-contain mx-auto mb-6 rounded-[2px]" data-testid="login-logo" />
           <div className="eyebrow mb-2">LALU CLADING</div>
           <h1 className="font-serif text-4xl text-[#F8F8F6]">Admin Panel</h1>
         </div>

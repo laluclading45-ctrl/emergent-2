@@ -21,8 +21,8 @@ export default function AdminShell() {
     <div className="admin-shell flex" data-testid="admin-shell">
       <aside className="admin-sidebar w-64 min-h-screen flex flex-col sticky top-0 h-screen">
         <div className="p-6 border-b border-white/10">
-          <div className="eyebrow mb-1">LALU CLADING</div>
-          <div className="font-serif text-2xl text-[#F8F8F6]">Admin Panel</div>
+          <img src="/logo-full.png" alt="Lalu Clading" className="h-12 w-auto object-contain rounded-[2px]" data-testid="admin-logo" />
+          <div className="eyebrow mt-3">ADMIN PANEL</div>
         </div>
         <nav className="p-3 flex-1 overflow-auto">
           {items.map(it => (

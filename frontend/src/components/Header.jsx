@@ -25,13 +25,8 @@ export default function Header() {
     <header className={`glass-header fixed top-0 left-0 right-0 z-50 transition-all ${scrolled ? "py-3" : "py-5"}`} data-testid="site-header">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
         <Link to="/" data-testid="logo-link" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 border border-[#D4AF37] flex items-center justify-center">
-            <span className="font-serif text-[#D4AF37] text-lg leading-none">L</span>
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span className="font-serif text-lg tracking-wide text-[#F8F8F6]">Lalu Clading</span>
-            <span className="eyebrow text-[0.6rem] tracking-[0.35em]">ARCHITECTURAL SKINS</span>
-          </div>
+          <img src="/logo-mark.png" alt="" className="h-10 lg:h-12 w-auto object-contain" aria-hidden="true" />
+          <img src="/logo-wordmark.png" alt="Lalu Clading — Surfaces for a Better Tomorrow" className="h-7 lg:h-9 w-auto object-contain" data-testid="header-logo" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9">
