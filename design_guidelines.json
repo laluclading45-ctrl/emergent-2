@@ -1,0 +1,181 @@
+{
+  "project_name": "Lalu Clading",
+  "archetype": "ARCHETYPE 5: LUXURY & ARCHITECTURAL PRECISION",
+  "theme_strategy": {
+    "default_mode": "dark",
+    "support_mode": "dark-dominant with warm ivory stone sections for catalogue readability",
+    "visual_tone": "Haute Architecture, European facade engineering, high-end monolithic stone & bronze elegance. No generic AI SaaS gradient templates."
+  },
+  "brand_identity": {
+    "company_name": "Lalu Clading",
+    "tagline": "Architectural Skins of Distinction",
+    "phone": "8088791219",
+    "email": "laluclading45@gmail.com",
+    "website": "laluclading.com",
+    "location": "Bengaluru & Mumbai, India (Pan-India & International Architectural Projects)"
+  },
+  "color_palette": {
+    "primary_dark": "#0B0C0E",
+    "secondary_dark": "#14161B",
+    "elevated_surface": "#1B1E24",
+    "border_subtle": "rgba(255, 255, 255, 0.08)",
+    "border_gold_subtle": "rgba(212, 175, 55, 0.22)",
+    "gold_accent_primary": "#D4AF37",
+    "gold_accent_hover": "#E5C158",
+    "bronze_metallic": "#B8860B",
+    "champagne_tint": "#F3EAD8",
+    "warm_white_text": "#F8F8F6",
+    "muted_editorial_gray": "#9E9E98",
+    "glass_background": "rgba(11, 12, 14, 0.78)",
+    "light_mode_surface": "#FAF8F5"
+  },
+  "typography": {
+    "headline_font": "Cormorant Garamond, Bodoni Moda, serif",
+    "body_font": "Manrope, -apple-system, BlinkMacSystemFont, sans-serif",
+    "technical_mono_font": "JetBrains Mono, monospace",
+    "hierarchy": {
+      "hero_h1": "text-4xl sm:text-5xl lg:text-6xl font-serif tracking-tight leading-[1.08]",
+      "section_h2": "text-2xl sm:text-3xl lg:text-4xl font-serif tracking-normal text-warm_white",
+      "section_h3": "text-xl sm:text-2xl font-sans font-medium tracking-wide",
+      "eyebrow_label": "text-xs font-mono uppercase tracking-[0.25em] text-[#D4AF37]",
+      "body_text": "text-base leading-relaxed text-[#9E9E98]"
+    }
+  },
+  "curated_image_assets": {
+    "hero_facade": "https://images.unsplash.com/photo-1615406020658-6c4b805f1f30?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmFsJTIwZmFjYWRlJTIwY2xhZGRpbmd8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+    "geometric_cladding": "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmFsJTIwZmFjYWRlJTIwY2xhZGRpbmd8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+    "stone_textured_facade": "https://images.unsplash.com/photo-1536501483244-925da0b87089?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmFsJTIwZmFjYWRlJTIwY2xhZGRpbmd8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+    "bronze_facade_angles": "https://images.unsplash.com/photo-1532680678473-a16f2cda8e43?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmFsJTIwZmFjYWRlJTIwY2xhZGRpbmd8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+    "luxury_wpc_interior_wall": "https://images.unsplash.com/photo-1675528030748-d463ab87e8d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB3b29kJTIwcGFuZWwlMjBpbnRlcmlvciUyMHdhbGx8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+    "interior_slat_accent": "https://images.unsplash.com/photo-1675528030415-dc82908eeb73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjB3b29kJTIwcGFuZWwlMjBpbnRlcmlvciUyMHdhbGx8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+    "architectural_residence": "https://images.unsplash.com/photo-1453586857165-eb78d44460ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHw0fHxleHRlcmlvciUyMGJ1aWxkaW5nJTIwZmFjYWRlJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc4OTMyNDk1OXww&ixlib=rb-4.1.0&q=85",
+    "cantilever_white_tower": "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxleHRlcmlvciUyMGJ1aWxkaW5nJTIwZmFjYWRlJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc4OTMyNDk1OXww&ixlib=rb-4.1.0&q=85",
+    "terracotta_stone_tower": "https://images.unsplash.com/photo-1516730670158-8c52cb740fcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxleHRlcmlvciUyMGJ1aWxkaW5nJTIwZmFjYWRlJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc4OTMyNDk1OXww&ixlib=rb-4.1.0&q=85"
+  },
+  "catalogue_categories": [
+    {
+      "id": "hpl-cladding",
+      "name": "HPL Cladding",
+      "subtitle": "High-Pressure Exterior Grade Laminates with UV Shield & Anti-Fade Matrix",
+      "hero_image": "https://images.unsplash.com/photo-1615406020658-6c4b805f1f30?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmFsJTIwZmFjYWRlJTIwY2xhZGRpbmd8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+      "spec_summary": "6mm - 12mm thickness, EN 438 Class 1 Fire Rated, 10-Year Fade Guarantee"
+    },
+    {
+      "id": "wpc-panels",
+      "name": "WPC Fluted & Louver Panels",
+      "subtitle": "Composite Wood-Polymer Acoustic & Architectural Louvers",
+      "hero_image": "https://images.unsplash.com/photo-1675528030748-d463ab87e8d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB3b29kJTIwcGFuZWwlMjBpbnRlcmlvciUyMHdhbGx8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+      "spec_summary": "Weatherproof, Zero Rot, Deep Flute & Flat Plank options"
+    },
+    {
+      "id": "exterior-cladding",
+      "name": "Exterior Facade Systems",
+      "subtitle": "Rear-Ventilated Architectural Envelopes & Rainscreen Panels",
+      "hero_image": "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmFsJTIwZmFjYWRlJTIwY2xhZGRpbmd8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+      "spec_summary": "High windload resistance, Concealed fastener substructures"
+    },
+    {
+      "id": "interior-panels",
+      "name": "Interior Architectural Panels",
+      "subtitle": "Textured Boiserie, Metallic Sheens, and Feature Walls",
+      "hero_image": "https://images.unsplash.com/photo-1675528030415-dc82908eeb73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjB3b29kJTIwcGFuZWwlMjBpbnRlcmlvciUyMHdhbGx8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+      "spec_summary": "Scratch-resistant, Class A flame spread, seamless joining"
+    },
+    {
+      "id": "decorative-solutions",
+      "name": "Decorative & Perforated Solutions",
+      "subtitle": "Parametric CNC Screens, Metal Mashrabiya & Accent Fins",
+      "hero_image": "https://images.unsplash.com/photo-1532680678473-a16f2cda8e43?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmFsJTIwZmFjYWRlJTIwY2xhZGRpbmd8ZW58MHx8fHwxNzg5MzI0OTU5fDA&ixlib=rb-4.1.0&q=85",
+      "spec_summary": "Bespoke pattern perforation, anodized champagne & bronze finishes"
+    },
+    {
+      "id": "other-specialties",
+      "name": "Architectural Specialties",
+      "subtitle": "Soffits, Column Covers, Parapets & Transition Trims",
+      "hero_image": "https://images.unsplash.com/photo-1516730670158-8c52cb740fcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxleHRlcmlvciUyMGJ1aWxkaW5nJTIwZmFjYWRlJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc4OTMyNDk1OXww&ixlib=rb-4.1.0&q=85",
+      "spec_summary": "Custom bent profiles, thermal break substructure components"
+    }
+  ],
+  "page_blueprints": {
+    "Home": {
+      "sections": [
+        "Architectural Navigation (Crystal Glass header with Gold Logo + Contact CTA + Catalogue Quick Link)",
+        "Hero Scene: Large architectural image slider with micro-motion, overline tag 'SWISS & ITALIAN INSPIRED FACADES', dual luxury CTAs (Explore Catalogue & Consult Architectural Team)",
+        "Brand Distinction Bento (Precision Substructure, UV & Climate Endurance, Zero-Maintenance Fluting, Bespoke Perforation)",
+        "Featured Collections Gallery (Interactive hover depth, texture zoom, category routing)",
+        "Applications Matrix (Luxury Villas, Corporate Envelopes, High-End Hospitality, Bespoke Penthouse Interiors)",
+        "Why Lalu Clading (Craftsmanship narrative, 10-Year Warranty, Thermal Comfort, Concealed Fastening)",
+        "Architectural Specifier CTA (Brochure instant view/download + Direct WhatsApp/Call)",
+        "Monolithic Architectural Footer (Deep charcoal, large brand lettering, contact info, admin gateway)"
+      ]
+    },
+    "Catalogue": {
+      "features": [
+        "Zero-cart, zero-pricing purity",
+        "Category tabs & search filter",
+        "Finish filter (Woodgrain, Raw Stone, Anodized Bronze, Matte Charcoal, Slate)",
+        "High-res product cards with 'View Technical Profile' and 'Request Physical Sample'",
+        "Instant Catalogue PDF download action modal"
+      ]
+    },
+    "ProductDetail": {
+      "features": [
+        "Multi-angle image gallery with full-screen lightbox",
+        "Interactive 3D / Specifier Depth Viewer (Canvas/3D rotatable panel with lighting angles & shadow control)",
+        "Technical Specifications Table (Thickness, Fire Rating, UV Resistance, Windload, Standard Sheet Dimensions)",
+        "Finish & Color Swatches (Smoked Oak, Corten Rust, Titanium Grey, Brushed Bronze, Carrara Vein)",
+        "Brochure PDF Download bar",
+        "Direct Enquiry CTA with auto-populated WhatsApp message & Quick Call (8088791219)"
+      ]
+    },
+    "Applications": {
+      "features": [
+        "Architectural project types showcased with before/after or exterior/interior detail",
+        "Technical mounting guide illustration (rear-ventilated vs direct-bond)"
+      ]
+    },
+    "Projects": {
+      "features": [
+        "Curated gallery of residential villas, boutique hotels, commercial towers, penthouse lounges",
+        "Filter by Material (HPL, WPC, Exterior Cladding, Metal/Perforated)"
+      ]
+    },
+    "Contact": {
+      "features": [
+        "Immediate direct channels: WhatsApp (+91 8088791219), Phone (8088791219), Email (laluclading45@gmail.com)",
+        "Architectural Project Enquiry Form (Name, Firm/Role, Phone, Email, Project Type, Estimated Area, Message)",
+        "Sample Kit Request toggle"
+      ]
+    },
+    "AdminPanel": {
+      "route": "/admin",
+      "sub_views": [
+        "Dashboard (Catalogue stats, enquiry log, recent updates)",
+        "Slide Manager (Hero banners, headlines, order)",
+        "Category Manager (Add/edit/reorder 6 key categories)",
+        "Product Manager (Add/edit products, specs, image URLs, finish swatches, PDF catalogue link)",
+        "Project Manager (Add/edit architectural gallery items)",
+        "Catalogue PDF Manager (Upload/link downloadable PDF brochures)",
+        "Media Library (Store/preview image assets)",
+        "Website Content Editor (Hero titles, phone/email, announcement banner)"
+      ]
+    }
+  },
+  "interactive_3d_specs": {
+    "module": "Interactive Architectural Panel Previewer",
+    "features": [
+      "Smooth 3D rotation via mouse drag / touch or preset angles (Front, 45-deg Angle, Close Flute, Side Edge)",
+      "Surface texture selector (HPL Woodgrain, Matte Charcoal, Brushed Bronze, Fluted Oak)",
+      "Sunlight angle slider showing light refraction on panel grooves",
+      "Technical measurement overlay toggles"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the NO CART / NO CHECKOUT / NO PRICING requirement. This is an international luxury architectural catalogue.",
+    "Make sure every interactive element (buttons, tabs, inputs, filters, admin actions) has a clear `data-testid` attribute.",
+    "Header must NEVER be 100% transparent: use `backdrop-blur-xl bg-[#0B0C0E]/85 border-b border-white/10` to guarantee high readability over large images.",
+    "Support both mobile and desktop responsiveness flawlessly with generous spacing (py-20, py-28) on section breaks.",
+    "Keep company contact numbers readily clickable: `tel:8088791219`, `https://wa.me/918088791219?text=Hello%20Lalu%20Clading...`, and `mailto:laluclading45@gmail.com`.",
+    "The Admin panel at `/admin` must be complete, easy to navigate, with persistent local/mock API data state allowing full CRUD for products, categories, projects, slides, and brochure links."
+  ]
+}
