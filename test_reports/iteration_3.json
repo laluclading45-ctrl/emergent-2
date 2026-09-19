@@ -1,0 +1,51 @@
+{
+  "summary": "Iteration 3 — Full production readiness audit for Lalu Clading. Backend: 18/18 pytest tests PASS covering auth (wrong pw → 401), authz gates (enquiries GET, upload POST → 401), upload extension whitelist (.exe → 400), 404 for missing product, 422 for invalid category PUT, public CRUD reads, static assets (robots.txt, sitemap.xml, favicon.png, index title 'Lalu Clading — Premium Cladding Solutions' + og meta), CORS credentialed same-origin GET, enquiry create → admin GET → DELETE round-trip, and PNG upload → /api/files/... serving 200 with image content-type. Frontend/E2E via Playwright: all public routes render (home, about, products, applications, projects, contact), all header/footer nav testids present, hero CTAs + floating call/WhatsApp present, filter chips + product cards work, no price text on /products. Admin: wrong password stays on /admin/login, correct login → /admin dashboard, every admin page renders with its Add-button testid, logout returns /admin → /admin/login. FULL Product CRUD verified with real file uploads (main image + 2 gallery + PDF brochure via hidden inputs) → appears in admin + public list → brochure URL serves HTTP 200 → edit persists across reload → duplicate testid works → delete cleans up. Category autoSlug (QA Audit Cat → qa-audit-cat) works. Slide CRUD: add-slide via image upload, LIVE/disabled toggle works (verified via ?all=true admin list). Project CRUD verified (created 'QA Audit Project' with cover image, visible on public /projects). Catalogue create with PDF works. Media library upload works. Content edit hero_subtitle → save → verify → revert to original 'Swiss & Italian inspired architectural facades engineered for the modern era.' fully verified. Enquiry submission from browser works cross-origin credentialed (same-origin so no preflight — CORS regression check PASS). Mobile 390x844: sidebar collapses to 64px (icons-only), products grid renders 15 cards, nav testids present. No JS page errors on any tested page. Zero hardcoded 'LaluAdmin' in /app/frontend/src. ALL QA artifacts cleaned up (products, categories, slides — including the disabled QA slide that was invisible in default listing, projects, catalogues, media uploads, test enquiries).",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "GET /api/slides/{id}", "issue": "Endpoint not implemented — only list/create/put/delete. Not a functional bug but limits testability."},
+      {"endpoint": "PUT /api/products/{id}", "issue": "Still requires full ProductCreate body (from iter 2). No PATCH endpoint."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [],
+    "missing_testids": [
+      {"component": "Home.jsx hero slider", "issue": "Slider dots (lines 61-64) have NO data-testid. Spec lists hero-dot-{i} as expected. Add data-testid={`hero-dot-${i}`} so tests can drive slide changes."},
+      {"component": "AdminDashboard.jsx", "issue": "Stat cards have no data-testid=stat-{key}. Currently only outer admin-dashboard testid."},
+      {"component": "AdminProjects.jsx / AdminCatalogues.jsx form inputs", "issue": "Title <input> in project-form-modal and catalogue-form-modal has no data-testid (prf-title, catf-title). Tests must locate by ordinal."},
+      {"component": "AdminContent.jsx", "issue": "content-save button present per spec; hero_subtitle input has no data-testid. Tests must scan input values to find it."},
+      {"component": "FileUpload.jsx", "issue": "The hidden <input type='file'> shares the testid namespace with the button but is not directly targetable. set_input_files fails on the button; must use expect_file_chooser or CSS sibling. Consider placing data-testid on the input as well (e.g. `${testid}-input`)."}
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_production_audit.py",
+    "/app/test_reports/pytest/iteration_3.xml"
+  ],
+  "action_items": [
+    "OPTIONAL: Add data-testid=`hero-dot-${i}` on Home hero slider dots (Home.jsx line 63) so automated tests can verify auto-advance + dot clicks per acceptance criteria.",
+    "OPTIONAL: Add data-testid=`stat-${key}` on AdminDashboard tile numbers to enable automated stat-vs-DB validation.",
+    "OPTIONAL: Add data-testid to project title (prf-title) + catalogue title (catf-title) + content hero_subtitle inputs; also add secondary testid on FileUpload's hidden <input> for direct set_input_files.",
+    "OPTIONAL: Implement PATCH /api/products/{id} or make PUT accept partial payload (existing iter-2 note; still valid)."
+  ],
+  "critical_code_review_comments": [
+    "CORS backend config (server.py 645-654) explicitly whitelists preview URL + localhost:3000 with credentials=true — correct. Same-origin production traffic (frontend & backend share cladding-gallery.preview.emergentagent.com) doesn't require preflight, so browser POST /api/enquiries and /api/auth/login succeed with credentials — verified via in-browser fetch(status:200 & 401 respectively).",
+    "K8s ingress OPTIONS handler returns 400 'Disallowed CORS origin' even for the whitelisted origin. This is inconsequential for same-origin production but WOULD break any TRUE cross-origin browser client using JSON content-type. Not a Lalu Clading code bug — infra-layer concern. Documented for awareness.",
+    "Upload validation confirmed: 25MB implicit + extension whitelist rejects .exe with 400 (test_upload_rejects_exe PASS). Auth-gated at endpoint level (401 without token).",
+    "seed_data pattern in server.py 636-640 runs on startup; admin login idempotent — verified iter 2/3.",
+    "index.html carries proper <title>Lalu Clading — Premium Cladding Solutions</title>, og:title/description/image, canonical, twitter tags — verified via test_index_meta_tags.",
+    "No 'LaluAdmin' string in /app/frontend/src (grep -r returned zero matches) — password not leaked into frontend bundle.",
+    "MongoDB _id is excluded via projection ({'_id': 0}) throughout (server.py 425 etc) — no serialization issues.",
+    "MINOR CODE SMELL: AdminDashboard shows '—' when stats missing/null; UX-fine but hides API errors. Consider explicit error state."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_production_audit.py"
+  ],
+  "success_rate": {"backend": "100% (18/18)", "frontend": "100% on tested flows"},
+  "test_credentials": "Admin: laluclading45@gmail.com / LaluAdmin@2026 (from /app/memory/test_credentials.md)",
+  "seed_data_creation": "All temporary QA artifacts created during testing were fully cleaned up: 1 product ('QA Audit Product EDITED' + its duplicate '(Copy)'), 1 category ('QA Audit Cat'), 1 slide ('QA Audit Slide' — was left toggled-disabled after test, later cleaned via explicit DELETE), 1 project ('QA Audit Project'), 1 catalogue ('QA Audit Catalogue'), 6 media entries (main.png, g1.png, g2.png, brochure.pdf, slide.png, qa_audit.png, media_qa.png, cat.pdf, c.png), 3 test enquiries (CORS Browser Test, cors-test, QA Audit Enq). Final DB state: 15 published products (16 with all=true — matches user data), 7 categories, 3 slides, 5 projects, 1 catalogue, 0 test enquiries. Matches pre-test baseline.",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Full production audit passed. Key testability gaps to be aware of: (1) hero dots have no testid — use `[data-testid=hero-section] button` and count them. (2) FileUpload button has testid but hidden input is a sibling — use `page.expect_file_chooser()` context and click the button, then set_files on the chooser. Works reliably. (3) Project/Catalogue/Content title fields have no testid — use ordinal `[data-testid=project-form-modal] input:nth-of-type(1)`. (4) Cleanup slides via `/api/slides?all=true` (public list hides disabled slides). (5) Admin cards: some (product) have edit-{id}/duplicate-{id}/delete-{id} testids; others (project, catalogue) may not. (6) PUT /api/products requires full body (no partial). (7) test_production_audit.py can be re-run any time — all 18 tests idempotent and self-cleanup."
+}

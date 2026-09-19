@@ -56,7 +56,7 @@ export default function AdminProjects() {
           <form onSubmit={save} className="bg-[#14161B] border border-white/10 max-w-2xl w-full p-6 my-8 h-fit">
             <div className="flex justify-between mb-6"><h2 className="font-serif text-2xl text-[#F8F8F6]">{editing ? "Edit" : "New"} Project</h2><button type="button" onClick={close}><X className="text-[#9E9E98]" /></button></div>
             <div className="space-y-4">
-              <div><label className="eyebrow block mb-2">Title *</label><input required value={form.title} onChange={e => setForm({...form, title: e.target.value})} /></div>
+              <div><label className="eyebrow block mb-2">Title *</label><input required value={form.title} onChange={e => setForm({...form, title: e.target.value})} data-testid="prf-title" /></div>
               <div><label className="eyebrow block mb-2">Description</label><textarea rows={3} value={form.description} onChange={e => setForm({...form, description: e.target.value})} /></div>
               <div><label className="eyebrow block mb-2">Cover Image</label><FileUpload value={form.cover_image} onChange={v => setForm({...form, cover_image: v})} /></div>
               <div><label className="eyebrow block mb-2">Gallery Images</label><MultiImageUpload value={form.images} onChange={v => setForm({...form, images: v})} /></div>

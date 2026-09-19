@@ -60,7 +60,7 @@ export default function Home() {
         </div>
         <div className="absolute bottom-10 right-6 lg:right-10 z-10 flex gap-2">
           {slides.map((_, i) => (
-            <button key={i} onClick={() => setIdx(i)} className={`h-[2px] transition-all ${i === idx ? "w-10 bg-[#D4AF37]" : "w-6 bg-white/30"}`} />
+            <button key={i} onClick={() => setIdx(i)} data-testid={`hero-dot-${i}`} className={`h-[2px] transition-all ${i === idx ? "w-10 bg-[#D4AF37]" : "w-6 bg-white/30"}`} />
           ))}
         </div>
       </section>

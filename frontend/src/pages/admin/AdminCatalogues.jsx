@@ -57,7 +57,7 @@ export default function AdminCatalogues() {
           <form onSubmit={save} className="bg-[#14161B] border border-white/10 max-w-xl w-full p-6 my-8 h-fit">
             <div className="flex justify-between mb-6"><h2 className="font-serif text-2xl text-[#F8F8F6]">{editing ? "Edit" : "New"} Catalogue</h2><button type="button" onClick={close}><X className="text-[#9E9E98]" /></button></div>
             <div className="space-y-4">
-              <div><label className="eyebrow block mb-2">Title *</label><input required value={form.title} onChange={e => setForm({...form, title: e.target.value})} /></div>
+              <div><label className="eyebrow block mb-2">Title *</label><input required value={form.title} onChange={e => setForm({...form, title: e.target.value})} data-testid="catf-title" /></div>
               <div><label className="eyebrow block mb-2">Description</label><textarea rows={3} value={form.description} onChange={e => setForm({...form, description: e.target.value})} /></div>
               <div><label className="eyebrow block mb-2">PDF *</label><FileUpload value={form.pdf_url} onChange={v => setForm({...form, pdf_url: v})} accept="application/pdf" label="Upload PDF" /></div>
               <div><label className="eyebrow block mb-2">Order</label><input type="number" value={form.order} onChange={e => setForm({...form, order: +e.target.value})} /></div>

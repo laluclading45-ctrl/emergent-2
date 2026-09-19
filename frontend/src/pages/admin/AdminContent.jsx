@@ -18,7 +18,7 @@ export default function AdminContent() {
       <div className="mb-8"><div className="eyebrow mb-2">EDITOR</div><h1 className="font-serif text-4xl text-[#F8F8F6]">Website Content</h1></div>
       <div className="grid gap-4 max-w-3xl">
         <div><label className="eyebrow block mb-2">Hero Title</label><input value={content.hero_title || ""} onChange={e => update("hero_title", e.target.value)} /></div>
-        <div><label className="eyebrow block mb-2">Hero Subtitle</label><input value={content.hero_subtitle || ""} onChange={e => update("hero_subtitle", e.target.value)} /></div>
+        <div><label className="eyebrow block mb-2">Hero Subtitle</label><input value={content.hero_subtitle || ""} onChange={e => update("hero_subtitle", e.target.value)} data-testid="content-hero-subtitle" /></div>
         <div><label className="eyebrow block mb-2">About Us</label><textarea rows={5} value={content.about || ""} onChange={e => update("about", e.target.value)} /></div>
         <div><label className="eyebrow block mb-2">Footer Tagline</label><input value={content.footer_tagline || ""} onChange={e => update("footer_tagline", e.target.value)} /></div>
 

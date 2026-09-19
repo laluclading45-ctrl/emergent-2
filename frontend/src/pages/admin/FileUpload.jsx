@@ -77,7 +77,7 @@ export function FileUpload({ value, onChange, accept = "image/*", label = "Uploa
           )}
         </button>
       )}
-      <input ref={ref} type="file" accept={accept} onChange={pick} className="hidden" />
+      <input ref={ref} type="file" accept={accept} onChange={pick} className="hidden" data-testid={testid ? `${testid}-input` : undefined} />
     </div>
   );
 }
@@ -126,7 +126,7 @@ export function MultiImageUpload({ value = [], onChange, testid }) {
           {busy ? <span className="text-[10px] text-[#D4AF37]">{progress}%</span> : <><Upload size={16} className="text-[#D4AF37]" /><span className="text-[9px]">Add</span></>}
         </button>
       </div>
-      <input ref={ref} type="file" accept="image/*" multiple onChange={(e) => doUpload(Array.from(e.target.files || []))} className="hidden" />
+      <input ref={ref} type="file" accept="image/*" multiple onChange={(e) => doUpload(Array.from(e.target.files || []))} className="hidden" data-testid={testid ? `${testid}-input` : undefined} />
       {busy && (
         <div className="w-full h-1 bg-white/10"><div className="h-full bg-[#D4AF37] transition-all" style={{ width: `${progress}%` }} /></div>
       )}

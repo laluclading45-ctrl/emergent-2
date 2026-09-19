@@ -21,7 +21,7 @@ export default function AdminDashboard() {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {tiles.map(t => (
-          <div key={t.key} className="admin-card">
+          <div key={t.key} className="admin-card" data-testid={`stat-${t.key}`}>
             <div className="eyebrow mb-2">{t.label}</div>
             <div className="font-serif text-5xl text-[#D4AF37]">{stats[t.key] ?? "—"}</div>
           </div>
