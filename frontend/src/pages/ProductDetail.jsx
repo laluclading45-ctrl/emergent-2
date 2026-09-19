@@ -33,13 +33,13 @@ export default function ProductDetail() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-8 grid lg:grid-cols-2 gap-12">
         <div>
           <div className="aspect-[4/3] bg-[#14161B] overflow-hidden mb-4">
-            <img src={fileUrl(gallery[imgIdx])} alt={p.name} className="w-full h-full object-cover" data-testid="product-main-image" />
+            <img loading="lazy" src={fileUrl(gallery[imgIdx])} alt={p.name} className="w-full h-full object-cover" data-testid="product-main-image" />
           </div>
           {gallery.length > 1 && (
             <div className="grid grid-cols-4 gap-3">
               {gallery.map((g, i) => (
                 <button key={i} onClick={() => setImgIdx(i)} className={`aspect-square overflow-hidden border ${i === imgIdx ? "border-[#D4AF37]" : "border-white/10"}`}>
-                  <img src={fileUrl(g)} alt="" className="w-full h-full object-cover" />
+                  <img loading="lazy" src={fileUrl(g)} alt="" className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>

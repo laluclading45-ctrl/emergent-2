@@ -33,7 +33,7 @@ export default function AdminMedia() {
         {items.map(m => (
           <div key={m.id} className="admin-card p-2">
             {m.kind === "image" ? (
-              <img src={fileUrl(m.url)} alt="" className="aspect-square w-full object-cover mb-2" />
+              <img loading="lazy" src={fileUrl(m.url)} alt="" className="aspect-square w-full object-cover mb-2" />
             ) : (
               <div className="aspect-square bg-[#0B0C0E] flex items-center justify-center text-[#D4AF37] font-mono text-xs mb-2">
                 .{(m.original_filename || "").split(".").pop()?.toUpperCase()}

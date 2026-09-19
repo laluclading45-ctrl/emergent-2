@@ -53,7 +53,7 @@ export default function Products() {
               <Link key={p.id} to={`/products/${p.id}`} data-testid={`product-card-${p.id}`}
                 className="group card-gold overflow-hidden">
                 <div className="aspect-[4/3] overflow-hidden bg-[#0B0C0E]">
-                  <img src={fileUrl(p.main_image)} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[900ms]" />
+                  <img loading="lazy" src={fileUrl(p.main_image)} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[900ms]" />
                 </div>
                 <div className="p-6">
                   <div className="eyebrow text-[0.65rem] mb-2">{cat?.name || "Product"}</div>

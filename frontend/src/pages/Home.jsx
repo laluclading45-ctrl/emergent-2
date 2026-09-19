@@ -89,7 +89,7 @@ export default function Home() {
           {categories.map((c) => (
             <Link key={c.id} to={`/products?category=${c.slug}`} data-testid={`category-card-${c.slug}`}
               className="group relative aspect-[4/5] overflow-hidden card-gold">
-              <img src={fileUrl(c.image_url)} alt={c.name} className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 group-hover:opacity-90 transition-all duration-[900ms]" />
+              <img loading="lazy" src={fileUrl(c.image_url)} alt={c.name} className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 group-hover:opacity-90 transition-all duration-[900ms]" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C0E] via-[#0B0C0E]/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-7">
                 <div className="eyebrow mb-3">{String(c.order || 0).padStart(2, "0")} — COLLECTION</div>
@@ -118,7 +118,7 @@ export default function Home() {
               <Link key={p.id} to={`/products/${p.id}`} data-testid={`featured-product-${p.id}`}
                 className="group card-gold overflow-hidden">
                 <div className="aspect-[4/3] overflow-hidden bg-[#0B0C0E]">
-                  <img src={fileUrl(p.main_image)} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[900ms]" />
+                  <img loading="lazy" src={fileUrl(p.main_image)} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[900ms]" />
                 </div>
                 <div className="p-6">
                   <div className="eyebrow text-[0.65rem] mb-2">{p.material}</div>
@@ -174,7 +174,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((p) => (
               <div key={p.id} className="group aspect-[3/2] overflow-hidden relative card-gold" data-testid={`home-project-${p.id}`}>
-                <img src={fileUrl(p.cover_image)} alt={p.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms]" />
+                <img loading="lazy" src={fileUrl(p.cover_image)} alt={p.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C0E] via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 p-7">
                   <div className="eyebrow mb-2">CASE STUDY</div>

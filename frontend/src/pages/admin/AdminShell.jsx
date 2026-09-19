@@ -19,28 +19,30 @@ export default function AdminShell() {
   const nav = useNavigate();
   return (
     <div className="admin-shell flex" data-testid="admin-shell">
-      <aside className="admin-sidebar w-64 min-h-screen flex flex-col sticky top-0 h-screen">
-        <div className="p-6 border-b border-white/10">
-          <img src="/logo-full.png" alt="Lalu Clading" className="h-12 w-auto object-contain rounded-[2px]" data-testid="admin-logo" />
-          <div className="eyebrow mt-3">ADMIN PANEL</div>
+      <aside className="admin-sidebar w-16 lg:w-64 min-h-screen flex flex-col sticky top-0 h-screen">
+        <div className="p-3 lg:p-6 border-b border-white/10">
+          <img src="/logo-full.png" alt="Lalu Clading" className="h-10 lg:h-12 w-auto object-contain rounded-[2px] hidden lg:block" data-testid="admin-logo" />
+          <img src="/logo-mark.png" alt="Lalu Clading" className="h-9 w-auto object-contain rounded-[2px] lg:hidden mx-auto" />
+          <div className="eyebrow mt-3 hidden lg:block">ADMIN PANEL</div>
         </div>
         <nav className="p-3 flex-1 overflow-auto">
           {items.map(it => (
             <NavLink key={it.to} to={it.to} end={it.end} data-testid={`admin-nav-${it.label.replace(/\s+/g, "-").toLowerCase()}`}
-              className={({ isActive }) => `admin-nav-item ${isActive ? "active" : ""}`}>
-              <it.icon size={16} /> {it.label}
+              title={it.label}
+              className={({ isActive }) => `admin-nav-item ${isActive ? "active" : ""} justify-center lg:justify-start px-2 lg:px-4`}>
+              <it.icon size={16} /> <span className="hidden lg:inline">{it.label}</span>
             </NavLink>
           ))}
         </nav>
-        <div className="p-4 border-t border-white/10 text-xs">
-          <div className="text-[#9E9E98] mb-2 break-all">{user?.email}</div>
+        <div className="p-2 lg:p-4 border-t border-white/10 text-xs">
+          <div className="text-[#9E9E98] mb-2 break-all hidden lg:block">{user?.email}</div>
           <button onClick={() => { logout(); nav("/admin/login"); }} data-testid="admin-logout"
-            className="flex items-center gap-2 text-[#F8F8F6] hover:text-[#D4AF37]">
-            <LogOut size={14} /> Sign Out
+            className="flex items-center gap-2 text-[#F8F8F6] hover:text-[#D4AF37] mx-auto lg:mx-0">
+            <LogOut size={14} /> <span className="hidden lg:inline">Sign Out</span>
           </button>
         </div>
       </aside>
-      <main className="flex-1 p-8"><Outlet /></main>
+      <main className="flex-1 min-w-0 p-4 lg:p-8"><Outlet /></main>
     </div>
   );
 }

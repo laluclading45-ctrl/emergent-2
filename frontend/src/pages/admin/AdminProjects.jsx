@@ -39,7 +39,7 @@ export default function AdminProjects() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {items.map(p => (
           <div key={p.id} className="admin-card">
-            <div className="aspect-[4/3] mb-3 overflow-hidden bg-[#0B0C0E]">{p.cover_image && <img src={fileUrl(p.cover_image)} alt="" className="w-full h-full object-cover" />}</div>
+            <div className="aspect-[4/3] mb-3 overflow-hidden bg-[#0B0C0E]">{p.cover_image && <img loading="lazy" src={fileUrl(p.cover_image)} alt="" className="w-full h-full object-cover" />}</div>
             <span className={`text-[10px] px-2 py-0.5 tracking-widest ${p.published ? "bg-green-900/40 text-green-400" : "bg-white/5 text-[#9E9E98]"}`}>{p.published ? "PUBLISHED" : "DRAFT"}</span>
             <h3 className="font-serif text-lg text-[#F8F8F6] mt-2">{p.title}</h3>
             <p className="text-xs text-[#9E9E98] mt-1 line-clamp-2">{p.description}</p>

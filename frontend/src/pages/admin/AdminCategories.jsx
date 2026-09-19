@@ -41,7 +41,7 @@ export default function AdminCategories() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {items.map(c => (
           <div key={c.id} className="admin-card">
-            <div className="aspect-[16/9] mb-3 overflow-hidden bg-[#0B0C0E]">{c.image_url && <img src={fileUrl(c.image_url)} alt="" className="w-full h-full object-cover" />}</div>
+            <div className="aspect-[16/9] mb-3 overflow-hidden bg-[#0B0C0E]">{c.image_url && <img loading="lazy" src={fileUrl(c.image_url)} alt="" className="w-full h-full object-cover" />}</div>
             <div className="flex items-center gap-2 mb-1">
               <span className={`text-[10px] px-2 py-0.5 tracking-widest ${c.enabled ? "bg-green-900/40 text-green-400" : "bg-white/5 text-[#9E9E98]"}`}>{c.enabled ? "ENABLED" : "HIDDEN"}</span>
               <span className="text-[10px] text-[#9E9E98]">/{c.slug}</span>

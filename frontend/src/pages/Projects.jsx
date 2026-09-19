@@ -18,7 +18,7 @@ export default function Projects() {
         {projects.map(p => (
           <button key={p.id} onClick={() => setOpen(p)} data-testid={`project-${p.id}`}
             className="text-left relative aspect-[3/2] overflow-hidden card-gold group">
-            <img src={fileUrl(p.cover_image)} alt={p.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms]" />
+            <img loading="lazy" src={fileUrl(p.cover_image)} alt={p.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms]" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C0E] via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 p-8">
               <div className="eyebrow mb-2">CASE STUDY</div>
@@ -36,9 +36,9 @@ export default function Projects() {
               <h2 className="font-serif text-3xl mb-2">{open.title}</h2>
               <p className="text-[#9E9E98] mb-6">{open.description}</p>
               <div className="grid grid-cols-2 gap-3">
-                <img src={fileUrl(open.cover_image)} alt="" className="w-full aspect-[4/3] object-cover" />
+                <img loading="lazy" src={fileUrl(open.cover_image)} alt="" className="w-full aspect-[4/3] object-cover" />
                 {(open.images || []).map((im, i) => (
-                  <img key={i} src={fileUrl(im)} alt="" className="w-full aspect-[4/3] object-cover" />
+                  <img loading="lazy" key={i} src={fileUrl(im)} alt="" className="w-full aspect-[4/3] object-cover" />
                 ))}
               </div>
             </div>

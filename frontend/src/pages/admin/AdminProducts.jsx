@@ -58,7 +58,7 @@ export default function AdminProducts() {
         {items.map(p => (
           <div key={p.id} className="admin-card" data-testid={`admin-product-${p.id}`}>
             <div className="aspect-[4/3] mb-3 overflow-hidden bg-[#0B0C0E]">
-              {p.main_image && <img src={fileUrl(p.main_image)} alt="" className="w-full h-full object-cover" />}
+              {p.main_image && <img loading="lazy" src={fileUrl(p.main_image)} alt="" className="w-full h-full object-cover" />}
             </div>
             <div className="flex items-center gap-2 mb-2">
               {p.featured && <span className="text-[10px] px-2 py-0.5 bg-[#D4AF37] text-[#0B0C0E] tracking-widest">FEATURED</span>}

@@ -16,7 +16,7 @@ export default function Applications() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-6">
         {apps.map((a, i) => (
           <div key={i} className="relative aspect-[4/3] overflow-hidden card-gold group" data-testid={`app-${i}`}>
-            <img src={fileUrl(a.image)} alt={a.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms]" />
+            <img loading="lazy" src={fileUrl(a.image)} alt={a.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms]" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C0E] via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 p-8">
               <div className="eyebrow mb-2">{String(i + 1).padStart(2, "0")} — APPLICATION</div>

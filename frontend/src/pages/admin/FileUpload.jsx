@@ -44,7 +44,7 @@ export function FileUpload({ value, onChange, accept = "image/*", label = "Uploa
       {value ? (
         <div className="relative inline-block w-full">
           {isImg ? (
-            <img src={fileUrl(value)} alt="" className="w-28 h-28 object-cover border border-white/10" />
+            <img loading="lazy" src={fileUrl(value)} alt="" className="w-28 h-28 object-cover border border-white/10" />
           ) : (
             <div className="flex items-center gap-2 p-3 border border-white/10 text-xs text-[#9E9E98]">
               {isPdf && <FileText size={14} className="text-[#D4AF37]" />}
@@ -111,7 +111,7 @@ export function MultiImageUpload({ value = [], onChange, testid }) {
       <div className="flex flex-wrap gap-2">
         {value.map((u, i) => (
           <div key={i} className="relative">
-            <img src={fileUrl(u)} alt="" className="w-20 h-20 object-cover border border-white/10" />
+            <img loading="lazy" src={fileUrl(u)} alt="" className="w-20 h-20 object-cover border border-white/10" />
             <button type="button" onClick={() => onChange(value.filter((_, x) => x !== i))} data-testid={`${testid}-remove-${i}`}
               className="absolute -top-1 -right-1 w-5 h-5 bg-[#D4AF37] text-[#0B0C0E] rounded-full flex items-center justify-center">
               <X size={10} />

@@ -19,7 +19,7 @@ export default function About() {
           <p className="text-[#9E9E98] leading-relaxed mb-4">{content.about}</p>
         </div>
         <div className="aspect-[4/5] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1615406020658-6c4b805f1f30?w=1600&q=90" alt="" className="w-full h-full object-cover" />
+          <img loading="lazy" src="https://images.unsplash.com/photo-1615406020658-6c4b805f1f30?w=1600&q=90" alt="" className="w-full h-full object-cover" />
         </div>
       </section>
 
